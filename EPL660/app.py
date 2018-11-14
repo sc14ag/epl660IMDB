@@ -4,115 +4,38 @@ from elasticsearch import Elasticsearch
 
 from flask import Flask
 
-app = Flask(__name__)
+def ElasticIndex():
+    f = open('static/IMDB-Movie-Data.csv', 'r')
+    es = Elasticsearch()
+    lines = f.readlines()[1:]
+    for line in lines:
+        lineElements = line.split(',')
 
+        json = {
+
+                    "Rank": lineElements[0].replace("\n", ""),
+                    "Title": lineElements[1].replace("_", ",").replace("\n", ""),
+                    "Genre": lineElements[2].replace("_", ",").replace("\n", ""),
+                    "Description": lineElements[3].replace("_", ",").replace("\n", ""),
+                    "Director": lineElements[4].replace("\n", ""),
+                    "Actors": lineElements[5].replace("_", ",").replace("\n", ""),
+                    "Year": lineElements[6].replace("\n", ""),
+                    "Runtime(Minutes)": lineElements[7].replace("\n", ""),
+                    "Rating": lineElements[8].replace("\n", ""),
+                    "Votes": lineElements[9].replace("\n", ""),
+                    "Revenue(Millions)": lineElements[10].replace("\n", ""),
+                    "Metascore": lineElements[11].replace("\n", "")
+                }
+
+        es.index(index="epl661", doc_type='movie', id=(int(lineElements[0]) - 1), body=json)
+
+ElasticIndex()
+app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    client = Elasticsearch()
-    # mapping = '''
-    #                      {
-    #                       "mappings": {
-    #              "movie": {
-    #               "properties": {
-    #                  "Rank": {
-    #                   "type": "integer",
-    #                   "term_vector": "with_positions_offsets_payloads",
-    #                   "store" : true,
-    #                   "analyzer" : "fulltext_analyzer",
-    #                   },
-    #                   "Title": {
-    #                   "type": "text",
-    #                   "term_vector": "with_positions_offsets_payloads",
-    #                   "analyzer" : "fulltext_analyzer"
-    #                  },
-    #                  "Genre": {
-    #                   "type": "text",
-    #                   "term_vector": "with_positions_offsets_payloads",
-    #                   "store" : true,
-    #                   "analyzer" : "fulltext_analyzer",
-    #                   },
-    #                   "Description": {
-    #                   "type": "text",
-    #                   "term_vector": "with_positions_offsets_payloads",
-    #                   "store" : true,
-    #                   "analyzer" : "fulltext_analyzer",
-    #                   },
-    #                   "Director": {
-    #                   "type": "text",
-    #                   "term_vector": "with_positions_offsets_payloads",
-    #                   "store" : true,
-    #                   "analyzer" : "fulltext_analyzer",
-    #                   },
-    #                   "Actors": {
-    #                   "type": "text",
-    #                   "term_vector": "with_positions_offsets_payloads",
-    #                   "store" : true,
-    #                   "analyzer" : "fulltext_analyzer",
-    #                   },
-    #                   "Year": {
-    #                   "type": "integer",
-    #                   "term_vector": "with_positions_offsets_payloads",
-    #                   "store" : true,
-    #                   "analyzer" : "fulltext_analyzer",
-    #                   },
-    #                   "Runtime(Minutes)": {
-    #                   "type": "integer",
-    #                   "term_vector": "with_positions_offsets_payloads",
-    #                   "store" : true,
-    #                   "analyzer" : "fulltext_analyzer",
-    #                   },
-    #                   "Rating": {
-    #                   "type": "integer",
-    #                   "term_vector": "with_positions_offsets_payloads",
-    #                   "store" : true,
-    #                   "analyzer" : "fulltext_analyzer",
-    #                   },
-    #                   "Votes": {
-    #                   "type": "integer",
-    #                   "term_vector": "with_positions_offsets_payloads",
-    #                   "store" : true,
-    #                   "analyzer" : "fulltext_analyzer",
-    #                   },
-    #                   "Revenue (Millions)": {
-    #                   "type": "integer",
-    #                   "term_vector": "with_positions_offsets_payloads",
-    #                   "store" : true,
-    #                   "analyzer" : "fulltext_analyzer",
-    #                   },
-    #                   "Metascore": {
-    #                   "type": "integer",
-    #                   "term_vector": "with_positions_offsets_payloads",
-    #                   "store" : true,
-    #                   "analyzer" : "fulltext_analyzer",
-    #                   }
-
-    #               }
-    #              },
-    #               "settings" : {
-    #              "index" : {
-    #               "number_of_shards" : 1,
-    #               "number_of_replicas" : 0
-    #              },
-    #               "analysis": {
-    #               "analyzer": {
-    #                  "fulltext_analyzer": {
-    #                   "type": "custom",
-    #                   "tokenizer": "whitespace",
-    #                   "filter": [
-    #                      "lowercase",
-    #                      "type_as_payload"
-    #                   ]
-    #                  }
-    #                  }
-    #              }
-    #           }
-    #          }
-    #                      }'''
-    # client.indices.create(index="test", ignore=400, body=mapping)
-
     return render_template('userInterface.html')
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
