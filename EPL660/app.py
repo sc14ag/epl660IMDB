@@ -22,5 +22,13 @@ def query():
     return render_template('userInterface.html', queryResultsFlask=results[0],queryResultsPlot =results[1])
 
 
+@app.route('/searchCategory', methods=['GET', 'POST'])
+def searchCategory():
+    category = request.args.get('type')
+    print(category)
+    categoryResults = es.searchCategory(category)
+    print(categoryResults[1])
+    return render_template('categorySearch.html',searchCategory=categoryResults[0],searchDes =categoryResults[1] )
+
 if __name__ == '__main__':
     app.run(debug=True)

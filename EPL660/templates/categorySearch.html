@@ -1,0 +1,38 @@
+{% extends "basic.html" %}
+
+
+{% block body %}
+<div class="container">
+
+ <div class='row'>
+     <div class='col-12'>
+     <div class='card-deck'>
+
+</div>
+
+
+
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+      <script>
+
+    results = {{ searchCategory|tojson }};
+    resultsDes = {{ searchDes|tojson }};
+     for (i = 0; i < results.length; i++) {
+
+          if ((i%4==0)&&(i!=0)) {
+
+             $(".card-deck").append("<div class='w-100 py-2'></div>")
+         }
+         else {
+
+              $(".card-deck").append("<div class='card'><div class='card-body'><h5 class='card-title'>" + results[i] + "</h5><p class='card-text'>"+resultsDes[i]+"</p></div></div></div>")
+
+          }
+
+     }
+
+
+
+    </script>
+
+{%  endblock %}

@@ -144,10 +144,14 @@ class Index:
         f.close()
 
     def searchCategory(self,category):
+        resultsCategory= []
+        resultsDes = []
         res = self.client.search(index="imdb", doc_type="movie", body={"query": {"match": {"Genre": category}}})
         print("%d documents found" % res['hits']['total'])
         for doc in res['hits']['hits']:
-            print("%s) %s" % (doc['_id'], doc['_source']['Title']))
+            resultsCategory.append(doc['_source']['Title'])
+            resultsDes.append(doc['_source']['Description'])
+        return resultsCategory,resultsDes
 
     def searchQuery (self,userQuery):
         results= []
