@@ -151,9 +151,10 @@ class Index:
 
     def searchQuery (self,userQuery):
         results= []
+        resultsPlot = []
         res = self.client.search(index="imdb4", doc_type="movie", body={"query": {"multi_match": {"query": userQuery}}})
         print("%d documents found" % res['hits']['total'])
         for doc in res['hits']['hits']:
             results.append(doc["_source"]['Title'])
-
-        return results
+            resultsPlot.append(doc["_source"]['Description'])
+        return results, resultsPlot

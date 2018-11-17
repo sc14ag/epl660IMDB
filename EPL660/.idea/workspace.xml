@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6c984198-bb7f-47db-b9fd-e406214817a3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ElasticIndexing.py" beforeDir="false" afterPath="$PROJECT_DIR$/ElasticIndexing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/userInterface.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/userInterface.html" afterDir="false" />
     </list>
@@ -13,7 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/EPL660$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1542310363179" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/EPL660$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1542464873789" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/EPL660$Flask__Clustering_py_.coverage" NAME="Flask (Clustering.py) Coverage Results" MODIFIED="1542296311564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="FUSProjectUsageTrigger">
@@ -39,13 +40,13 @@
     <session id="-349536772">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.4" value="2" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -62,14 +63,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="227" />
-          <entry key="py" value="1387" />
+          <entry key="html" value="768" />
+          <entry key="py" value="1932" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="227" />
-          <entry key="Python" value="1387" />
+          <entry key="HTML" value="768" />
+          <entry key="Python" value="1932" />
         </counts>
       </usages-collector>
     </session>
@@ -79,34 +80,34 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="23" column="65" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="65" />
+            <state relative-caret-position="340">
+              <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
               <folding>
-                <element signature="e#0#42#0" expanded="true" />
-                <marker date="1542310355729" expanded="true" signature="230:231" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ElasticIndexing.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2482">
-              <caret line="146" column="44" lean-forward="true" selection-start-line="146" selection-start-column="44" selection-end-line="146" selection-end-column="44" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-                <marker date="1542310622435" expanded="true" signature="200:205" ph="..." />
+                <element signature="e#0#12#0" expanded="true" />
+                <marker date="1542464871541" expanded="true" signature="254:256" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ElasticIndexing.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1926">
+              <caret line="159" column="35" selection-start-line="159" selection-start-column="35" selection-end-line="159" selection-end-column="35" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+                <marker date="1542464871478" expanded="true" signature="200:205" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/userInterface.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2881">
-              <caret line="190" column="44" selection-start-line="190" selection-start-column="44" selection-end-line="190" selection-end-column="44" />
+            <state relative-caret-position="2856">
+              <caret line="168" column="73" selection-start-line="168" selection-start-column="73" selection-end-line="168" selection-end-column="73" />
             </state>
           </provider>
         </entry>
@@ -114,8 +115,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/IMDB-Movie-Data.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="655" column="160" selection-start-line="655" selection-start-column="21" selection-end-line="655" selection-end-column="160" />
+            <state>
+              <caret column="28" selection-start-column="17" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -137,6 +138,8 @@
       <find>.csv</find>
       <find>the levell</find>
       <find>console</find>
+      <find>SearchBtn</find>
+      <find>form</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -147,9 +150,9 @@
       <list>
         <option value="$PROJECT_DIR$/ElasticIndex.py" />
         <option value="$PROJECT_DIR$/Clustering.py" />
+        <option value="$PROJECT_DIR$/ElasticIndexing.py" />
         <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/templates/userInterface.html" />
-        <option value="$PROJECT_DIR$/ElasticIndexing.py" />
       </list>
     </option>
   </component>
@@ -304,7 +307,7 @@
     <frame x="-7" y="-7" width="1038" height="794" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24335378" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24846625" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -335,49 +338,40 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ElasticIndex.py" />
-    <entry file="file://$PROJECT_DIR$/Clustering.py">
+    <entry file="file://$PROJECT_DIR$/Clustering.py" />
+    <entry file="file://$PROJECT_DIR$/static/IMDB-Movie-Data.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="38" lean-forward="true" selection-end-line="68" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
+        <state>
+          <caret column="28" selection-start-column="17" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/IMDB-Movie-Data.csv">
+    <entry file="file://$PROJECT_DIR$/ElasticIndexing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="655" column="160" selection-start-line="655" selection-start-column="21" selection-end-line="655" selection-end-column="160" />
+        <state relative-caret-position="1926">
+          <caret line="159" column="35" selection-start-line="159" selection-start-column="35" selection-end-line="159" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+            <marker date="1542464871478" expanded="true" signature="200:205" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="23" column="65" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="65" />
+        <state relative-caret-position="340">
+          <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
           <folding>
-            <element signature="e#0#42#0" expanded="true" />
-            <marker date="1542310355729" expanded="true" signature="230:231" ph="..." />
+            <element signature="e#0#12#0" expanded="true" />
+            <marker date="1542464871541" expanded="true" signature="254:256" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/userInterface.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2881">
-          <caret line="190" column="44" selection-start-line="190" selection-start-column="44" selection-end-line="190" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ElasticIndexing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2482">
-          <caret line="146" column="44" lean-forward="true" selection-start-line="146" selection-start-column="44" selection-end-line="146" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-            <marker date="1542310622435" expanded="true" signature="200:205" ph="..." />
-          </folding>
+        <state relative-caret-position="2856">
+          <caret line="168" column="73" selection-start-line="168" selection-start-column="73" selection-end-line="168" selection-end-column="73" />
         </state>
       </provider>
     </entry>
