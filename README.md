@@ -26,8 +26,3 @@ https://www.python.org/downloads/release/python-360/
 8. Go to app.py and run it
 
 9. **Happy Coding**
-
-
-
-# epl660_IMDB
-User interface for the purposes of the course EPL660. Extracts and displays results about movie dataset
