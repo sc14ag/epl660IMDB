@@ -12,8 +12,11 @@ class Index:
         self.counter = 0
         self.client = Elasticsearch()
         self.lineElements =[]
+        self.clustTitles = []
+        self.clustGenres = []
+        self.clustRanks = []
         self.titles = []
-        self.synopses = []
+        self.clustSynopses =[]
 
 
         # mapping = '''
@@ -117,13 +120,14 @@ class Index:
         #                  }'''
         # self.client.indices.create(index="imdb", ignore=400, body=mapping)
     def implement(self):
-        
-        print ("mpika")
         f = open('static/IMDB-Movie-Data.csv', 'r')
         lines = f.readlines()[1:]
         for line in lines:
             self.lineElements = line.split(',')
-
+            self.clustTitles.append(self.lineElements[1].replace("\n","").replace("\n",""))
+            self.clustSynopses.append(str(self.lineElements[3].replace("_",",").replace("\n","")))
+            self.clustGenres.append(self.lineElements[2].replace("_",",").replace("\n",""))
+            self.clustRanks.append(int(self.lineElements[0].replace("\n","")))
             json = {
 
                 "Rank": self.lineElements[0].replace("\n",""),
@@ -162,3 +166,7 @@ class Index:
             results.append(doc["_source"]['Title'])
             resultsPlot.append(doc["_source"]['Description'])
         return results, resultsPlot
+
+
+
+
