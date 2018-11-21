@@ -1,0 +1,245 @@
+{% extends "basic.html" %}
+{% block body %}
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #f1f1f1f1;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
+</style>
+
+
+
+
+
+
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<div class="container-fluid">
+	  <div class="row">
+		<div class="col-3">
+		  <h2>Genres</h2>
+		  <ul>
+			<li>Action</li>
+			<li>Adventure</li>
+			<li>Animation</li>
+			<li>Biography</li>
+			<li>Comedy</li>
+			<li>Crime</li>
+			<li>Documentary</li>
+			<li>Drama</li>
+			<li>Family</li>
+			<li>Fantasy</li>
+			<li>Film Noir</li>
+			<li>History</li>
+			<li>Horror</li>
+			<li>Music</li>
+			<li>Musical</li>
+			<li>Mystery</li>
+			<li>Romance</li>
+			<li>Sci-fi</li>
+			<li>Short</li>
+			<li>Sport</li>
+			<li>Superhero</li>
+			<li>Thriller</li>
+			<li>War</li>
+			<li>Western</li>
+		  </ul>
+		</div>
+		<div class="col-6">
+		  <form class="form my-2 my-lg-0">
+			<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+			<button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+		  </form>
+          <br><br>
+          <div id="movies"></div>
+
+            <h3 style="display: inline;color:blue">More Like This&nbsp;</h3>
+
+            <div class="slideshow-container">
+
+
+
+<div class="mySlides">
+{#  <q>But man is not made for defeat. A man can be destroyed but not defeated.</q>#}
+{#  <p class="author">- Ernest Hemingway</p>#}
+</div>
+
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+
+<div class="dot-container">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+</div>
+
+
+
+
+
+		<div class="col-3">
+		  <h2>Top 3 Movies</h2>
+		  <ol>
+			<li>Guardians of the Galaxy</li>
+			<li>Prometheus</li>
+			<li>Split</li>
+		  </ol>
+
+		  <br>
+		  <br>
+		  <h2>Resent Movies</h2>
+		  <ol>
+			<li>Split</li>
+			<li>Sing</li>
+			<li>Suicide Squad</li>
+		  </ol>
+		</div>
+
+	  </div>
+      </div>
+</div>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script type="text/javascript">
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+
+
+
+          	var url_string = document.URL;
+			var url = new URL(url_string);
+			var movie_name = {{ movieTitle|tojson }};
+			var movie_year = {{ movieYear|tojson }};
+			var movie_duration = {{ movieDur|tojson }};
+			var movie_genre = {{ movieGenre|tojson }};
+			var movie_rating = {{ movieRating|tojson }};
+			var movie_plot = {{ movieDur|tojson }};
+			var movie_dir = {{ movieDir|tojson }};
+			var movie_actors = {{ movieAct|tojson }};
+            var movie_text="";
+
+                    movie_text+="<h2>"+movie_name+"</h2>";
+                    movie_text+="<span>"+movie_year+" | "+movie_duration+" minutes |"+movie_genre+" | Rating: "+movie_rating+"/10</span>";
+                    movie_text+="<p>"+movie_plot+"</p>";
+                    movie_text+="<p>Director:"+movie_dir+"</p>";
+                   movie_text+="<p>Actors:"+movie_actors+"</p>";
+
+
+              document.getElementById("movies").innerHTML=movie_text;
+
+
+              var similarMovies = {{ simMovies|tojson }}
+                    for (i = 0; i < similarMovies.length; i++) {
+
+                     $(".slideshow-container").append("<div class=\"mySlides\"><q>"+similarMovies[i]+"</q></div>")
+                    }
+
+			document.close();
+		</script>
+
+{%  endblock %}

@@ -157,15 +157,23 @@ class Index:
             resultsDes.append(doc['_source']['Description'])
         return resultsCategory,resultsDes
 
-    def searchQuery (self,userQuery):
+    def searchByQuery (self,userQuery):
         results= []
         resultsPlot = []
-        res = self.client.search(index="imdb4", doc_type="movie", body={"query": {"multi_match": {"query": userQuery}}})
+        res = self.client.search(index="imdb", doc_type="movie", body={"query": {"multi_match": {"query": userQuery}}})
         print("%d documents found" % res['hits']['total'])
         for doc in res['hits']['hits']:
             results.append(doc["_source"]['Title'])
             resultsPlot.append(doc["_source"]['Description'])
         return results, resultsPlot
+
+    def searchByTitle (self,title):
+        resultsDetails = []
+        res = self.client.search(index="imdb", doc_type="movie", body={"query": {"match": {"Title": title}}})
+        print("%d documents found" % res['hits']['total'])
+        for doc in res['hits']['hits']:
+            resultsDetails.append(doc['_source'])
+        return resultsDetails
 
 
 

@@ -1,16 +1,17 @@
-import flask
-from flask import render_template, request
-import ElasticIndexing
-# A very simple Flask Hello World app for you to get started with...
 from flask import Flask
+from flask import render_template, request
+
+import ElasticIndexing
+from clustering import Clustering
 
 es = ElasticIndexing.Index()
-# es.implement()
+es.implement()
+clust= Clustering(es)
 app = Flask(__name__)
 results = []
 
 
-@app.route('/', methods=['GET'])
+@app.route('/')
 def hello_world():
     return render_template('userInterface.html',queryResultsFlask="empty")
 
@@ -18,17 +19,40 @@ def hello_world():
 @app.route('/searchQuery', methods=['POST'])
 def query():
     userquery = request.form['userQuery']
-    results = es.searchQuery(userquery)
+    results = es.searchByQuery(userquery)
+    # print(results[0][0])
+    # similarMovies = clust.findSimilarMovies(results[0][0])
+    # print(similarMovies)
     return render_template('userInterface.html', queryResultsFlask=results[0],queryResultsPlot =results[1])
 
 
 @app.route('/searchCategory', methods=['GET', 'POST'])
 def searchCategory():
     category = request.args.get('type')
-    print(category)
     categoryResults = es.searchCategory(category)
     print(categoryResults[1])
     return render_template('categorySearch.html',searchCategory=categoryResults[0],searchDes =categoryResults[1] )
+
+@app.route('/view/', methods=['GET'])
+def view():
+    print('view Details')
+
+    titleMovie =request.args.get('movie')
+
+    similarMovies = clust.findSimilarMovies(titleMovie)
+    print(similarMovies)
+
+    movieDetails = es.searchByTitle(titleMovie)
+    movieDetailsTitle = movieDetails[0]['Title']
+    movieDetailsGenre = movieDetails[0]['Genre']
+    movieDetailsDes = movieDetails[0]['Description']
+    movieDetailsDir = movieDetails[0]['Director']
+    movieDetailsAct = movieDetails[0]['Actors']
+    movieDetailsYear = movieDetails[0]['Year']
+    movieDetailsMin = movieDetails[0]['Runtime(Minutes)']
+    movieDetailRat = movieDetails[0]['Rating']
+    return render_template('movieDetails.html',movieTitle =movieDetailsTitle,movieGenre = movieDetailsGenre,moviePlot = movieDetailsDes,movieDir = movieDetailsDir,movieAct=movieDetailsAct,movieYear = movieDetailsYear,
+                           movieDur=movieDetailsMin,movieRating=movieDetailRat,simMovies = similarMovies)
 
 if __name__ == '__main__':
     app.run(debug=True)

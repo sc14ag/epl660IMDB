@@ -75,6 +75,26 @@
          integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
          crossorigin="anonymous"></script>
       <script type="text/javascript">
+
+      {#$( document ).ready(function() {#}
+      {##}
+      {#   $('.movieTitle').click(function (event) {#}
+      {#       alert("mpika");#}
+      {#       alert($('.movieTitle').text())#}
+      {#      event.preventDefault();#}
+      {#        $.ajax({#}
+      {#        type : 'POST',#}
+      {#        url : "{{url_for('view')}}",#}
+      {#        contentType: 'application/json;charset=UTF-8',#}
+      {#        data : {'data': $('.movieTitle').text()}#}
+      {#      });#}
+      {##}
+      {##}
+      {##}
+      {##}
+
+
+
          function storeToArray(str) {
 
              var res = str.split("\"");
@@ -111,7 +131,12 @@
 
                      movies_records.push(storeToArray(data[i]));
                      if (i != 0) {
-                         data_text += "<h2>" + movies_records[i][1] + "</h2>";
+
+                var movieName=movies_records[i][1];
+              	var temp=movieName.split(" ");
+              	var finalMovieName=temp;
+              	var full_url_movie = "/view?movie="+finalMovieName;
+                       data_text+="<a href="+full_url_movie+"> <h2>"+movies_records[i][1]+"</h2></a>";
                          data_text += "<p>" + movies_records[i][3] + "</p>";
                      }
 
