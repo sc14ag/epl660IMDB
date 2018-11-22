@@ -39,6 +39,7 @@ def view():
 
     titleMovie =request.args.get('movie')
 
+    print(titleMovie)
     similarMovies = clust.findSimilarMovies(titleMovie)
     print(similarMovies)
 

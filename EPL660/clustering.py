@@ -11,12 +11,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 
-# import ElasticIndexing
-#
-# es = ElasticIndexing.Index()
-# es.implement()
 
-#
 # ensures that only the first 100 are read in
 class Clustering:
 
@@ -80,6 +75,7 @@ class Clustering:
 
             for i in range(self.num_clusters):
                     if query_result in self.frame.ix[i]['title'].values.tolist():
+                        print("clustering")
                         return (random.sample(self.frame.ix[i]['title'].values.tolist(), 3))
 
 

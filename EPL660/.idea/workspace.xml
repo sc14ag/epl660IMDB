@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6c984198-bb7f-47db-b9fd-e406214817a3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clustering.py" beforeDir="false" afterPath="$PROJECT_DIR$/clustering.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ElasticIndexing.py" beforeDir="false" afterPath="$PROJECT_DIR$/ElasticIndexing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/categorySearch.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/categorySearch.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/userInterface.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/userInterface.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clustering.py" beforeDir="false" afterPath="$PROJECT_DIR$/clustering.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/movieDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/movieDetails.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +14,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/EPL660$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1542814605277" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/EPL660$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1542889163749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/EPL660$Flask__Clustering_py_.coverage" NAME="Flask (clustering.py) Coverage Results" MODIFIED="1542739857647" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/EPL660$Flask__PythonNutch_py_.coverage" NAME="Flask (PythonNutch.py) Coverage Results" MODIFIED="1542876308487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-467069811">
@@ -81,39 +80,42 @@
     <session id="-1582116896">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.107" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.35" value="1" />
+          <entry key="project.open.time.46" value="1" />
+          <entry key="project.open.time.57" value="1" />
           <entry key="project.open.time.59" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.open.time.66" value="1" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="html" value="1" />
-          <entry key="py" value="3" />
+          <entry key="py" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="1" />
-          <entry key="Python" value="3" />
+          <entry key="Python" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="3" />
-          <entry key="html" value="854" />
-          <entry key="py" value="1301" />
+          <entry key="html" value="929" />
+          <entry key="py" value="1362" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="854" />
+          <entry key="HTML" value="929" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="1301" />
+          <entry key="Python" value="1362" />
         </counts>
       </usages-collector>
     </session>
@@ -121,36 +123,16 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="41" column="54" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="54" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/PycharmProjects/EPL660/venv/Lib/site-packages/flask/app.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="2291" selection-start-line="2291" selection-end-line="2291" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/clustering.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="28" selection-start-column="23" selection-end-column="28" />
+            <state relative-caret-position="238">
+              <caret line="77" column="41" selection-start-line="77" selection-start-column="41" selection-end-line="77" selection-end-column="41" />
               <folding>
-                <marker date="1542809740343" expanded="true" signature="464:473" ph="..." />
-                <marker date="1542809740343" expanded="true" signature="2656:2669" ph="..." />
-                <marker date="1542809740343" expanded="true" signature="2918:2927" ph="..." />
-                <marker date="1542809740343" expanded="true" signature="3489:3498" ph="..." />
+                <element signature="e#0#37#0" expanded="true" />
+                <marker date="1542887263101" expanded="true" signature="387:396" ph="..." />
+                <marker date="1542887263101" expanded="true" signature="2579:2592" ph="..." />
+                <marker date="1542887263101" expanded="true" signature="2885:2894" ph="..." />
+                <marker date="1542887263101" expanded="true" signature="3456:3465" ph="..." />
               </folding>
             </state>
           </provider>
@@ -159,7 +141,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ElasticIndexing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
+            <state relative-caret-position="2686">
               <caret line="159" column="16" selection-start-line="159" selection-start-column="16" selection-end-line="159" selection-end-column="16" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
@@ -171,7 +153,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/categorySearch.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="255">
               <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
             </state>
           </provider>
@@ -180,7 +162,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/basic.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="67">
+            <state relative-caret-position="459">
               <caret line="27" column="10" selection-start-line="25" selection-start-column="7" selection-end-line="27" selection-end-column="10" />
             </state>
           </provider>
@@ -189,8 +171,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/IMDB-Movie-Data.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="28" selection-start-column="17" selection-end-column="28" />
+            <state relative-caret-position="105">
+              <caret line="40" column="12" selection-start-line="40" selection-start-column="3" selection-end-line="40" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -198,8 +180,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/userInterface.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="46" column="12" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="18" />
+            <state relative-caret-position="204">
+              <caret line="138" column="62" selection-start-line="138" selection-start-column="35" selection-end-line="138" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -207,11 +189,35 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/movieDetails.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="134" column="6" lean-forward="true" selection-start-line="134" selection-start-column="6" selection-end-line="134" selection-end-column="6" />
+            <state relative-caret-position="272">
+              <caret line="202" column="105" lean-forward="true" selection-start-line="202" selection-start-column="105" selection-end-line="202" selection-end-column="105" />
               <folding>
-                <element signature="e#1262#1296#0#HTML" expanded="true" />
-                <element signature="e#1395#1401#0#HTML" expanded="true" />
+                <element signature="e#2897#2931#0#HTML" expanded="true" />
+                <element signature="e#2946#2952#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PythonNutch.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -220,7 +226,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/PycharmProjects/EPL660/venv/Lib/site-packages/sklearn/externals/joblib/externals/cloudpickle/cloudpickle.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
+            <state relative-caret-position="782">
               <caret line="46" selection-start-line="46" selection-end-line="46" />
             </state>
           </provider>
@@ -232,16 +238,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Flask Main" />
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>the levell</find>
-      <find>console</find>
-      <find>SearchBtn</find>
       <find>form</find>
       <find>&quot;</find>
       <find>stopwords</find>
@@ -269,6 +272,9 @@
       <find>SearchQ</find>
       <find>Split</find>
       <find>myS</find>
+      <find>document.re</find>
+      <find>5- 25- 77</find>
+      <find>rese</find>
     </findStrings>
     <replaceStrings>
       <replace>'</replace>
@@ -286,6 +292,7 @@
         <option value="$PROJECT_DIR$/templates/categorySearch.html" />
         <option value="$PROJECT_DIR$/ElasticIndexing.py" />
         <option value="$PROJECT_DIR$/templates/userInterface.html" />
+        <option value="$PROJECT_DIR$/PythonNutch.py" />
         <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/clustering.py" />
         <option value="$PROJECT_DIR$/templates/movieDetails.html" />
@@ -309,7 +316,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -331,6 +337,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -375,6 +382,21 @@
       <option name="launchJavascriptDebuger" value="false" />
       <method v="2" />
     </configuration>
+    <configuration name="Flask (PythonNutch.py)" type="Python.FlaskServer" factoryName="Flask server" temporary="true" nameIsGenerated="true">
+      <module name="EPL660" />
+      <option name="target" value="$PROJECT_DIR$/PythonNutch.py" />
+      <option name="targetType" value="PATH" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
     <configuration name="Flask (app.py)" type="Python.FlaskServer" factoryName="Flask server" temporary="true" nameIsGenerated="true">
       <module name="EPL660" />
       <option name="target" value="$PROJECT_DIR$/app.py" />
@@ -409,10 +431,12 @@
       <item itemvalue="Flask server.EPL660" />
       <item itemvalue="Flask server.Flask (app.py)" />
       <item itemvalue="Flask server.Flask (clustering.py)" />
+      <item itemvalue="Flask server.Flask (PythonNutch.py)" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Flask server.Flask (app.py)" />
+        <item itemvalue="Flask server.Flask (PythonNutch.py)" />
         <item itemvalue="Flask server.Flask (clustering.py)" />
       </list>
     </recent_temporary>
@@ -443,7 +467,7 @@
     <frame x="-7" y="-7" width="1038" height="794" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22801636" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20654397" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -497,64 +521,16 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ElasticIndex.py" />
-    <entry file="file://$USER_HOME$/PycharmProjects/EPL660/venv/Lib/site-packages/sklearn/externals/joblib/externals/cloudpickle/cloudpickle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/PycharmProjects/EPL660/venv/Lib/site-packages/flask/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
+        <state relative-caret-position="38454">
           <caret line="2291" selection-start-line="2291" selection-end-line="2291" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/basic.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="27" column="10" selection-start-line="25" selection-start-column="7" selection-end-line="27" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/IMDB-Movie-Data.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="28" selection-start-column="17" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/userInterface.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="46" column="12" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/categorySearch.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clustering.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="28" selection-start-column="23" selection-end-column="28" />
-          <folding>
-            <marker date="1542809740343" expanded="true" signature="464:473" ph="..." />
-            <marker date="1542809740343" expanded="true" signature="2656:2669" ph="..." />
-            <marker date="1542809740343" expanded="true" signature="2918:2927" ph="..." />
-            <marker date="1542809740343" expanded="true" signature="3489:3498" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ElasticIndexing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
+        <state relative-caret-position="2686">
           <caret line="159" column="16" selection-start-line="159" selection-start-column="16" selection-end-line="159" selection-end-column="16" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
@@ -562,23 +538,82 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/basic.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="10" selection-start-line="25" selection-start-column="7" selection-end-line="27" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PythonNutch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects/EPL660/venv/Lib/site-packages/sklearn/externals/joblib/externals/cloudpickle/cloudpickle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="41" column="54" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="54" />
+        <state relative-caret-position="238">
+          <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/clustering.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="77" column="41" selection-start-line="77" selection-start-column="41" selection-end-line="77" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+            <marker date="1542887263101" expanded="true" signature="387:396" ph="..." />
+            <marker date="1542887263101" expanded="true" signature="2579:2592" ph="..." />
+            <marker date="1542887263101" expanded="true" signature="2885:2894" ph="..." />
+            <marker date="1542887263101" expanded="true" signature="3456:3465" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/IMDB-Movie-Data.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="40" column="12" selection-start-line="40" selection-start-column="3" selection-end-line="40" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/categorySearch.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/userInterface.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="138" column="62" selection-start-line="138" selection-start-column="35" selection-end-line="138" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/movieDetails.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="134" column="6" lean-forward="true" selection-start-line="134" selection-start-column="6" selection-end-line="134" selection-end-column="6" />
+        <state relative-caret-position="272">
+          <caret line="202" column="105" lean-forward="true" selection-start-line="202" selection-start-column="105" selection-end-line="202" selection-end-column="105" />
           <folding>
-            <element signature="e#1262#1296#0#HTML" expanded="true" />
-            <element signature="e#1395#1401#0#HTML" expanded="true" />
+            <element signature="e#2897#2931#0#HTML" expanded="true" />
+            <element signature="e#2946#2952#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
