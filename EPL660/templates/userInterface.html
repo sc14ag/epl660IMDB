@@ -4,9 +4,10 @@
 
 
 
-      <div class="container-fluid">
+     
          <div class="row">
             <div class="col-3">
+				<br>
                <h2>Genres</h2>
               <ul>
 			<li> <a href="{{url_for('searchCategory', type='Action')}}"> Action </a> </li>
@@ -37,6 +38,7 @@
 		  </ul>
             </div>
             <div class="col-6">
+				<br>
                <form action="/searchQuery" method="post">
                   <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
                      id="SearchInput" name="userQuery" required>
@@ -46,7 +48,7 @@
                <div id="movies"></div>
             </div>
             <div class="col-3">
-			<p> <!kwdikas gia google search </p>
+			<br>
 			<form action="https://www.google.com/search" class="GoogleSearch" method="get" name="GoogleSearch" target="_blank">
 			<input name="Google" type="hidden" value=Google Search" required>
 			<input autocomplete="on" class="form-control search" name="q" placeholder="Go to Google" required="required"  type="text" required>
@@ -68,8 +70,7 @@
                </ol>
             </div>
          </div>
-      </div>
-      <br>
+      
 
       <!-- Optional JavaScript -->
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
