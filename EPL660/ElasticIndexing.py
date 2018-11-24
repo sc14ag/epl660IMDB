@@ -19,108 +19,8 @@ class Index:
         self.clustSynopses =[]
 
 
-        # mapping = '''
-        #                  {
-        #                   "mappings": {
-        #          "movie": {
-        #           "properties": {
-        #              "Rank": {
-        #               "type": "integer",
-        #               "term_vector": "with_positions_offsets_payloads",
-        #               "store" : true,
-        #               "analyzer" : "fulltext_analyzer",
-        #               },
-        #               "Title": {
-        #               "type": "text",
-        #               "term_vector": "with_positions_offsets_payloads",
-        #               "analyzer" : "fulltext_analyzer"
-        #              },
-        #              "Genre": {
-        #               "type": "text",
-        #               "term_vector": "with_positions_offsets_payloads",
-        #               "store" : true,
-        #               "analyzer" : "fulltext_analyzer",
-        #               },
-        #               "Description": {
-        #               "type": "text",
-        #               "term_vector": "with_positions_offsets_payloads",
-        #               "store" : true,
-        #               "analyzer" : "fulltext_analyzer",
-        #               },
-        #               "Director": {
-        #               "type": "text",
-        #               "term_vector": "with_positions_offsets_payloads",
-        #               "store" : true,
-        #               "analyzer" : "fulltext_analyzer",
-        #               },
-        #               "Actors": {
-        #               "type": "text",
-        #               "term_vector": "with_positions_offsets_payloads",
-        #               "store" : true,
-        #               "analyzer" : "fulltext_analyzer",
-        #               },
-        #               "Year": {
-        #               "type": "integer",
-        #               "term_vector": "with_positions_offsets_payloads",
-        #               "store" : true,
-        #               "analyzer" : "fulltext_analyzer",
-        #               },
-        #               "Runtime(Minutes)": {
-        #               "type": "integer",
-        #               "term_vector": "with_positions_offsets_payloads",
-        #               "store" : true,
-        #               "analyzer" : "fulltext_analyzer",
-        #               },
-        #               "Rating": {
-        #               "type": "integer",
-        #               "term_vector": "with_positions_offsets_payloads",
-        #               "store" : true,
-        #               "analyzer" : "fulltext_analyzer",
-        #               },
-        #               "Votes": {
-        #               "type": "integer",
-        #               "term_vector": "with_positions_offsets_payloads",
-        #               "store" : true,
-        #               "analyzer" : "fulltext_analyzer",
-        #               },
-        #               "Revenue (Millions)": {
-        #               "type": "integer",
-        #               "term_vector": "with_positions_offsets_payloads",
-        #               "store" : true,
-        #               "analyzer" : "fulltext_analyzer",
-        #               },
-        #               "Metascore": {
-        #               "type": "integer",
-        #               "term_vector": "with_positions_offsets_payloads",
-        #               "store" : true,
-        #               "analyzer" : "fulltext_analyzer",
-        #               }
-        #
-        #           }
-        #          },
-        #           "settings" : {
-        #          "index" : {
-        #           "number_of_shards" : 1,
-        #           "number_of_replicas" : 0
-        #          },
-        #           "analysis": {
-        #           "analyzer": {
-        #              "fulltext_analyzer": {
-        #               "type": "custom",
-        #               "tokenizer": "whitespace",
-        #               "filter": [
-        #                  "lowercase",
-        #                  "type_as_payload"
-        #               ]
-        #              }
-        #              }
-        #          }
-        #       }
-        #      }
-        #                  }'''
-        # self.client.indices.create(index="imdb", ignore=400, body=mapping)
     def implement(self):
-        f = open('static/IMDB-Movie-Data.csv', 'r')
+        f = open('static/IMDB-Movie-Data.csv', 'r',encoding='utf8')
         lines = f.readlines()[1:]
         for line in lines:
             self.lineElements = line.split(',')
@@ -141,7 +41,8 @@ class Index:
                 "Rating": self.lineElements[8].replace("\n",""),
                 "Votes": self.lineElements[9].replace("\n",""),
                 "Revenue(Millions)": self.lineElements[10].replace("\n",""),
-                "Metascore": self.lineElements[11].replace("\n","")
+                "Metascore": self.lineElements[11].replace("\n",""),
+                "ImageURL":self.lineElements[12].replace("\n","").replace("\"","")
             }
 
             self.client.index(index="imdb", doc_type='movie', id=(int(self.lineElements[0])-1), body=json)

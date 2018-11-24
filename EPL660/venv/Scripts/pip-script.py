@@ -1,4 +1,4 @@
-#!C:\Users\user\PycharmProjects\EPL660\venv\Scripts\python.exe
+#!C:\Users\mariagreg\Downloads\epl660_IMDB\EPL660\venv\Scripts\python.exe
 # EASY-INSTALL-ENTRY-SCRIPT: 'pip==10.0.1','console_scripts','pip'
 __requires__ = 'pip==10.0.1'
 import re

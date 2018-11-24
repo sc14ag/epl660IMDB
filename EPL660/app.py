@@ -52,8 +52,10 @@ def view():
     movieDetailsYear = movieDetails[0]['Year']
     movieDetailsMin = movieDetails[0]['Runtime(Minutes)']
     movieDetailRat = movieDetails[0]['Rating']
+    movieDetailImg = movieDetails[0]['ImageURL']
+    print(movieDetailsDes)
     return render_template('movieDetails.html',movieTitle =movieDetailsTitle,movieGenre = movieDetailsGenre,moviePlot = movieDetailsDes,movieDir = movieDetailsDir,movieAct=movieDetailsAct,movieYear = movieDetailsYear,
-                           movieDur=movieDetailsMin,movieRating=movieDetailRat,simMovies = similarMovies)
+                           movieDur=movieDetailsMin,movieRating=movieDetailRat,simMovies = similarMovies,movieImg = movieDetailImg)
 
 if __name__ == '__main__':
     app.run(debug=True)

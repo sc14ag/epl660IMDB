@@ -23,7 +23,7 @@
 			<li> <a href="{{url_for('searchCategory', type='Fantasy')}}">Fantasy </a> </li>
 			<li> <a href="{{url_for('searchCategory', type='Film Noir')}}"> Film Noir </a> </li>
 			<li> <a href="{{url_for('searchCategory', type='History')}}"> History </a> </li>
-			 <li> <a href="{{url_for('searchCategory', type='Horror')}}"> Horror </a> </li>
+			 <li><a href="{{url_for('searchCategory', type='Horror')}}"> Horror </a> </li>
 			<li> <a href="{{url_for('searchCategory', type='Music')}}"> Music </a> </li>
 			<li> <a href="{{url_for('searchCategory', type='Musical')}}"> Musical </a> </li>
 			<li> <a href="{{url_for('searchCategory', type='Mystery')}}" > Mystery </a> </li>
@@ -38,22 +38,28 @@
 		  </ul>
             </div>
             <div class="col-6">
+                <div class="form-group">
 				<br>
                <form action="/searchQuery" method="post">
-                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search our database..." aria-label="Search"
                      id="SearchInput" name="userQuery" required>
                   <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" id="searchBtn">Search</button>
                </form>
+                </div>
+
+                <div class="form-group">
+                	<form action="https://www.google.com/search" class="GoogleSearch" method="get" name="GoogleSearch" target="_blank">
+			<input name="Google" type="hidden" value=Google Search" required>
+			<input autocomplete="on" class="form-control search" name="q" placeholder="Search Google..." required="required"  type="text" required>
+			<button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+			</form>
+                </div>
                <br><br>
                <div id="movies"></div>
             </div>
             <div class="col-3">
 			<br>
-			<form action="https://www.google.com/search" class="GoogleSearch" method="get" name="GoogleSearch" target="_blank">
-			<input name="Google" type="hidden" value=Google Search" required>
-			<input autocomplete="on" class="form-control search" name="q" placeholder="Go to Google" required="required"  type="text" required>
-			<button class="button" type="submit">Search</button>
-			</form
+
                <h2>Top 3 Movies</h2>
                <ol>
                   <li>Guardians of the Galaxy</li>
@@ -70,7 +76,7 @@
                </ol>
             </div>
          </div>
-      
+
 
       <!-- Optional JavaScript -->
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
