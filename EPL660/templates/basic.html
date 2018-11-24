@@ -9,16 +9,34 @@
          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
       <title>EPL660 Project</title>
+
       <style type="text/css">
          .header {
          height: 300px;
          background-size: cover;
-         background: url('/static/background.jpg') no-repeat 50% 50%;
-         border-bottom: 1px solid #ff6a00;
+         background: url('/static/popcorn.jpg') no-repeat 50% 50%;
+
          color: white;
          text-align: center;
          }
+
+         h2{
+            font-size:40px;
+         }
+
+         .col-3 h2{
+            padding-left: 60px;
+            padding-bottom:20px;
+         }
+
+         li{
+            font-size:30px;
+            padding-left:60px;
+         }
+
+
 
          a:hover {
   color: black ;
@@ -31,10 +49,7 @@ a {
   color: white;
   background-color: transparent;
 }
-         .col-3 {
-         background-color: orange;
-         color: white;
-         }
+
          #movies h2 {
          color: blue;
          }
@@ -57,14 +72,35 @@ a {
          left: 50%;
          transform: translate(-50%, -50%);
          }
+
+         .nav {
+            background-color:black;
+         }
+
+
       </style>
    </head>
 <body>
 
+
+        <ul class="nav justify-content-center">
+          <li class="nav-item home-icon">
+              <a class="nav-link active" href="#"> Home</a>
+
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('categories')}}">Categories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+
          <div class="header">
             <h1 class="display-4">Search engine for movies</h1>
          </div>
-      
+
  {% block body %} {% endblock %}
    </body>
 <div class="footer">

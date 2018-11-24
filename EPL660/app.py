@@ -16,6 +16,10 @@ def hello_world():
     return render_template('userInterface.html',queryResultsFlask="empty")
 
 
+@app.route('/categories')
+def categories():
+    return render_template('categories.html')
+
 @app.route('/searchQuery', methods=['POST'])
 def query():
     userquery = request.form['userQuery']
@@ -37,9 +41,8 @@ def searchCategory():
 def view():
     print('view Details')
 
+    similarUrls = []
     titleMovie =request.args.get('movie')
-
-    print(titleMovie)
     similarMovies = clust.findSimilarMovies(titleMovie)
     print(similarMovies)
 
@@ -53,9 +56,12 @@ def view():
     movieDetailsMin = movieDetails[0]['Runtime(Minutes)']
     movieDetailRat = movieDetails[0]['Rating']
     movieDetailImg = movieDetails[0]['ImageURL']
-    print(movieDetailsDes)
+
+    for title in similarMovies:
+       similarUrls.append(es.searchByTitle(title)[0]['ImageURL'])
+    print(similarUrls)
     return render_template('movieDetails.html',movieTitle =movieDetailsTitle,movieGenre = movieDetailsGenre,moviePlot = movieDetailsDes,movieDir = movieDetailsDir,movieAct=movieDetailsAct,movieYear = movieDetailsYear,
-                           movieDur=movieDetailsMin,movieRating=movieDetailRat,simMovies = similarMovies,movieImg = movieDetailImg)
+                           movieDur=movieDetailsMin,movieRating=movieDetailRat,simMovies = similarUrls,movieImg = movieDetailImg)
 
 if __name__ == '__main__':
     app.run(debug=True)

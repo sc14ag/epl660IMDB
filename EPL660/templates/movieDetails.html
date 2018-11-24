@@ -1,12 +1,15 @@
 {% extends "basic.html" %}
 {% block body %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
+
    * {box-sizing: border-box}
    body {font-family: Verdana, sans-serif; margin:0}
    /* Slideshow container */
    .slideshow-container {
    position: relative;
-   background: #f1f1f1f1;
+   background: transparent;
    }
    /* Slides */
    .mySlides {
@@ -22,7 +25,7 @@
    width: auto;
    margin-top: -30px;
    padding: 16px;
-   color: #888;
+   color: white;
    font-weight: bold;
    font-size: 20px;
    border-radius: 0 3px 3px 0;
@@ -56,14 +59,15 @@
    height: 15px;
    width: 15px;
    margin: 0 2px;
-   background-color: #bbb;
+   background-color: white;
    border-radius: 50%;
    display: inline-block;
    transition: background-color 0.6s ease;
+
    }
    /* Add a background color to the active dot/circle */
    .active, .dot:hover {
-   background-color: #717171;
+   background-color:white;
    }
    /* Add an italic font style to all quotes */
    q {font-style: italic;}
@@ -113,10 +117,7 @@
          <h3 style="display: inline;color:white">More Like This&nbsp;</h3>
          <div class="slideshow-container">
             <div class="mySlides">
-               {#  <q>But man is not made for defeat. A man can be destroyed but not defeated.</q>#}
-               {#
-               <p class="author">- Ernest Hemingway</p>
-               #}
+
             </div>
             <a class="prev" onclick="plusSlides(-1)">❮</a>
             <a class="next" onclick="plusSlides(1)">❯</a>
@@ -204,7 +205,7 @@
                  	var finalMovieName=similarMovies[i];
                  	var full_url_movie = "/view?movie="+finalMovieName;
 
-                        $(".slideshow-container").append("<div class='mySlides'><a href="+full_url_movie+"><h3>"+similarMovies[i]+"</h3></a></div>")
+                        $(".slideshow-container").append("<div class='mySlides'><img src="+similarMovies[i]+"alt='No image found' width='100' height='100'id='responsive-image'></img></div>")
                        }
 
    			document.close();
