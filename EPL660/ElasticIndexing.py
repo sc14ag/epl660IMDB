@@ -1,5 +1,6 @@
 from __future__ import print_function
 from elasticsearch import Elasticsearch
+import io
 
 
 class Index:
@@ -20,14 +21,14 @@ class Index:
 
 
     def implement(self):
-        f = open('static/IMDB-Movie-Data.csv', 'r',encoding='utf8')
+        f = io.open('static/IMDB-Movie-Data.csv',encoding='utf8')
         lines = f.readlines()[1:]
         for line in lines:
             self.lineElements = line.split(',')
-            self.clustTitles.append(self.lineElements[1].replace("\n","").replace("\n",""))
-            self.clustSynopses.append(str(self.lineElements[3].replace("_",",").replace("\n","")))
-            self.clustGenres.append(self.lineElements[2].replace("_",",").replace("\n",""))
-            self.clustRanks.append(int(self.lineElements[0].replace("\n","")))
+            # self.clustTitles.append(self.lineElements[1].replace("\n","").replace("\n",""))
+            # self.clustSynopses.append(str(self.lineElements[3].replace("_",",").replace("\n","")))
+            # self.clustGenres.append(self.lineElements[2].replace("_",",").replace("\n",""))
+            # self.clustRanks.append(int(self.lineElements[0].replace("\n","")))
             json = {
 
                 "Rank": self.lineElements[0].replace("\n",""),
@@ -49,14 +50,14 @@ class Index:
         f.close()
 
     def searchCategory(self,category):
-        resultsCategory= []
+
         resultsDes = []
         res = self.client.search(index="imdb", doc_type="movie", body={"query": {"match": {"Genre": category}}})
         print("%d documents found" % res['hits']['total'])
         for doc in res['hits']['hits']:
-            resultsCategory.append(doc['_source']['Title'])
-            resultsDes.append(doc['_source']['Description'])
-        return resultsCategory,resultsDes
+
+            resultsDes.append(doc['_source'])
+        return resultsDes
 
     def searchByQuery (self,userQuery):
         results= []
@@ -75,7 +76,6 @@ class Index:
         for doc in res['hits']['hits']:
             resultsDetails.append(doc['_source'])
         return resultsDetails
-
 
 
 
