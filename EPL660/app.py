@@ -6,7 +6,7 @@ from clustering import Clustering
 
 es = ElasticIndexing.Index()
 es.implement()
-clust= Clustering(es)
+# clust= Clustering(es)
 app = Flask(__name__)
 results = []
 
@@ -34,8 +34,7 @@ def query():
 def searchCategory():
     category = request.args.get('type')
     categoryResults = es.searchCategory(category)
-    print(categoryResults[1])
-    return render_template('categorySearch.html',searchCategory=categoryResults[0],searchDes =categoryResults[1] )
+    return render_template('categorySearch.html',searchCategory=categoryResults,searchDes =categoryResults,searchImg = categoryResults )
 
 @app.route('/view/', methods=['GET'])
 def view():
