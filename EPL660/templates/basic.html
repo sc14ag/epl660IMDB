@@ -7,10 +7,11 @@
       <!-- Bootstrap CSS -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-      <title>EPL660 Project</title>
+
+
+       <title>EPL660 Project</title>
 
       <style type="text/css">
          .header {
@@ -77,10 +78,24 @@ a {
             background-color:black;
          }
 
+         .top_arrow{
+		position: -webkit-sticky;
+    	position: sticky;
+    	top: 90%;
+
+	}
+
+	    .fa-arrow-alt-circle-up{
+	        color:blue;
+	        position: relative;
+	        z-index: -1;
+	    |
+
 
       </style>
    </head>
 <body>
+        <section id="top"></section>
 
 
         <ul class="nav justify-content-center">
@@ -93,13 +108,17 @@ a {
             <a class="nav-link" href="{{url_for('categories')}}">Categories</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="{{url_for('about')}}">About</a>
           </li>
         </ul>
 
+        <a href="#top" class="top_arrow float-right"><i class="far fa-arrow-alt-circle-up fa-3x"></i></a>
+
+
+
         <a href="{{url_for('hello_world')}}">
          <div class="header">
-            <h1 class="display-4">Search engine for movies</h1>
+
          </div>
         </a>
 
