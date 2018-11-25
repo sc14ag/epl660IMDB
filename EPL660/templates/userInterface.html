@@ -105,7 +105,7 @@
 
                 var movieName=movies_records[i][1];
               	var temp=movieName.split(" ");
-              	var finalMovieName=temp;
+              	var finalMovieName=temp.join("+");
               	var full_url_movie = "/view?movie="+finalMovieName;
                        data_text+="<a href="+full_url_movie+"> <h2>"+movies_records[i][1]+"</h2></a>";
                          data_text += "<p>" + movies_records[i][3] + "</p>";
