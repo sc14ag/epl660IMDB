@@ -23,7 +23,34 @@ def about():
 
 @app.route('/categories')
 def categories():
-    return render_template('categories.html')
+
+    imageAction= es.searchCategory("Action")[0]['ImageURL']
+    imageAdventure = es.searchCategory("Adventure")[0]['ImageURL']
+    print(imageAdventure)
+    imageAnimation = es.searchCategory("Animation")[0]['ImageURL']
+    imageBiography = es.searchCategory("Biography")[0]['ImageURL']
+    imageComedy = es.searchCategory("Comedy")[0]['ImageURL']
+    imageCrime = es.searchCategory("Crime")[0]['ImageURL']
+    imageDrama = es.searchCategory("Drama")[0]['ImageURL']
+    imageFamily = es.searchCategory("Family")[0]['ImageURL']
+    imageFantasy = es.searchCategory("Fantasy")[0]['ImageURL']
+
+    imageHorror = es.searchCategory("Horror")[0]['ImageURL']
+    imageMusic = es.searchCategory("Music")[0]['ImageURL']
+    imageMusical = es.searchCategory("Musical")[0]['ImageURL']
+    imageMystery = es.searchCategory("Mystery")[0]['ImageURL']
+    imageRomance = es.searchCategory("Romance")[0]['ImageURL']
+    imageScifi = es.searchCategory("Sci-fi")[0]['ImageURL']
+    imageSport = es.searchCategory("Sport")[0]['ImageURL']
+    imageThriller = es.searchCategory("Thriller")[0]['ImageURL']
+    imageWar = es.searchCategory("War")[0]['ImageURL']
+    imageWestern = es.searchCategory("Western")[0]['ImageURL']
+
+
+    return render_template('categories.html', imgAction= imageAction, imgAdventure=imageAdventure, imgAnimation= imageAnimation, imgBio=imageBiography, imgComdedy= imageComedy,
+imgCrime=imageCrime, imgDrama=imageDrama, imgFamily=imageFamily, imgFantasy=imageFantasy, imgHorror= imageHorror, imgMusic=imageMusic,imgMusical=imageMusical,
+                           imgMystery= imageMystery, imgRom=imageRomance, imgScifi=imageScifi, imgSport= imageSport, imgThriller= imageThriller, imgWar=imageWar,
+                           imgWestern=imageWestern)
 
 @app.route('/searchQuery', methods=['POST'])
 def query():
@@ -39,16 +66,14 @@ def query():
 def searchCategory():
     category = request.args.get('type')
     categoryResults = es.searchCategory(category)
-    return render_template('categorySearch.html',searchCategory=categoryResults,searchDes =categoryResults,searchImg = categoryResults,movieCategory=category)
+    return render_template('categorySearch.html',searchCategory=categoryResults,searchDes =categoryResults,searchImg = categoryResults )
 
 @app.route('/view/', methods=['GET'])
 def view():
     print('view Details')
 
     similarUrls = []
-    print(request.args)
-    titleMovie =request.args.get("movie").replace("+"," ")
-    print(titleMovie)
+    titleMovie =request.args.get('movie')
     similarMovies = clust.findSimilarMovies(titleMovie)
     print(similarMovies)
 
