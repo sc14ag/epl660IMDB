@@ -15,6 +15,11 @@ results = []
 def hello_world():
     return render_template('userInterface.html',queryResultsFlask="empty")
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+
 
 @app.route('/categories')
 def categories():
