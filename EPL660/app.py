@@ -39,7 +39,7 @@ def query():
 def searchCategory():
     category = request.args.get('type')
     categoryResults = es.searchCategory(category)
-    return render_template('categorySearch.html',searchCategory=categoryResults,searchDes =categoryResults,searchImg = categoryResults )
+    return render_template('categorySearch.html',searchCategory=categoryResults,searchDes =categoryResults,searchImg = categoryResults,movieCategory=category)
 
 @app.route('/view/', methods=['GET'])
 def view():
