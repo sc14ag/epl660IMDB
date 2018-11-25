@@ -6,7 +6,7 @@ from clustering import Clustering
 
 es = ElasticIndexing.Index()
 es.implement()
-# clust= Clustering(es)
+clust= Clustering(es)
 app = Flask(__name__)
 results = []
 
@@ -25,8 +25,8 @@ def query():
     userquery = request.form['userQuery']
     results = es.searchByQuery(userquery)
     # print(results[0][0])
-    # similarMovies = clust.findSimilarMovies(results[0][0])
-    # print(similarMovies)
+    similarMovies = clust.findSimilarMovies(results[0][0])
+    print(similarMovies)
     return render_template('userInterface.html', queryResultsFlask=results[0],queryResultsPlot =results[1])
 
 

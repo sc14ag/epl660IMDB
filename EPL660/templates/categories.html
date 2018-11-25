@@ -4,11 +4,23 @@
 {% block body %}
 
 <style>
+   .container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+/* Centered text */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
    img {
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 5px;
+    border-radius: 8px;
     width: 150px;
+    height:auto;
 }
 </style>
  <div class="container">
@@ -16,12 +28,231 @@
   <div class="row">
       <div class="col-2"></div>
        <div class="col-8">
-<div class="card bg-dark text-white">
-  <img class="card-img" src="/static/popcorn.jpg" alt="Card image" width="20px" height="20px">
+           <div class="card-deck">
+<div class="card container">
+  <img class="card-img" src="/static/coverImage.jpg" alt="Card image" >
   <div class="card-img-overlay">
-    <h5 class="card-title">ACTION</h5>
+      <h5 class="card-title centered"><a href="{{url_for('searchCategory', type='Action')}}">ACTION</a></h5>
   </div>
 </div>
+
+               <div class="card container">
+                  <img class="card-img" src="/static/coverImage.jpg" alt="Card image">
+                  <div class="card-img-overlay">
+                      <h5 class="card-title centered"><a href="{{url_for('searchCategory', type='Adventure')}}" >ADVENTURE</a></h5>
+                  </div>
+                </div>
+
+               <div class="card container">
+                  <img class="card-img" src="/static/coverImage.jpg" alt="Card image">
+                  <div class="card-img-overlay">
+                      <h5 class="card-title centered"><a href="{{url_for('searchCategory', type='Animation')}}">ANIMATION</a></h5>
+                  </div>
+                </div>
+
+
+
+       </div>
+
+           <br>
+
+           <div class="card-deck">
+<div class="card container">
+  <img class="card-img" src="/static/coverImage.jpg" alt="Card image" >
+  <div class="card-img-overlay">
+      <h5 class="card-title centered"><a href="{{url_for('searchCategory', type='Biography')}}" >BIOGRAPHY</a></h5>
+  </div>
+</div>
+
+               <div class="card container">
+                  <img class="card-img" src="/static/coverImage.jpg" alt="Card image">
+                  <div class="card-img-overlay">
+                      <h5 class="card-title centered"><a href="{{url_for('searchCategory', type='Comedy')}}">COMEDY</a></h5>
+                  </div>
+                </div>
+
+               <div class="card container">
+                  <img class="card-img" src="/static/coverImage.jpg" alt="Card image">
+                  <div class="card-img-overlay">
+                      <h5 class="card-title centered"><a href="{{url_for('searchCategory', type='Crime')}}">CRIME</a></h5>
+                  </div>
+                </div>
+
+
+
+       </div>
+
+           <br>
+
+            <div class="card-deck">
+<div class="card container">
+  <img class="card-img" src="/static/coverImage.jpg" alt="Card image" >
+  <div class="card-img-overlay">
+      <h5 class="card-title centered"><a href="{{url_for('searchCategory', type='Documentary')}}" >DOCUMENTARY</a></h5>
+  </div>
+</div>
+
+               <div class="card container">
+                  <img class="card-img" src="/static/coverImage.jpg" alt="Card image">
+                  <div class="card-img-overlay">
+                      <h5 class="card-title centered"><a href="{{url_for('searchCategory', type='Drama')}}">DRAMA</a></h5>
+                  </div>
+                </div>
+
+               <div class="card container">
+                  <img class="card-img" src="/static/coverImage.jpg" alt="Card image">
+                  <div class="card-img-overlay">
+                      <h5 class="card-title centered"><a href="{{url_for('searchCategory', type='Family')}}">FAMILY</a></h5>
+                  </div>
+                </div>
+
+
+
+       </div>
+
+           <br>
+
+           <div class="card-deck">
+<div class="card container">
+  <img class="card-img" src="/static/coverImage.jpg" alt="Card image" >
+  <div class="card-img-overlay">
+      <h5 class="card-title centered"><a href="{{url_for('searchCategory', type='Fantasy')}}" >FANTASY</a></h5>
+  </div>
+</div>
+
+               <div class="card container">
+                  <img class="card-img" src="/static/coverImage.jpg" alt="Card image">
+                  <div class="card-img-overlay">
+                      <h5 class="card-title centered"><a href="{{url_for('searchCategory', type='Film Noir')}}">FILM NOIR</a></h5>
+                  </div>
+                </div>
+
+               <div class="card container">
+                  <img class="card-img" src="/static/coverImage.jpg" alt="Card image">
+                  <div class="card-img-overlay">
+                      <h5 class="card-title centered"><a href="{{url_for('searchCategory', type='History')}}">HISTORY</a></h5>
+                  </div>
+                </div>
+
+
+
+       </div>
+
+           <br>
+
+           <div class="card-deck">
+<div class="card container">
+  <img class="card-img" src="/static/coverImage.jpg" alt="Card image" >
+  <div class="card-img-overlay">
+      <h5 class="card-title centered"><a href="{{url_for('searchCategory', type='Horror')}}" >HORROR</a></h5>
+  </div>
+</div>
+
+               <div class="card container">
+                  <img class="card-img" src="/static/coverImage.jpg" alt="Card image">
+                  <div class="card-img-overlay">
+                      <h5 class="card-title centered"><a href="{{url_for('searchCategory', type='Music')}}">MUSIC</a></h5>
+                  </div>
+                </div>
+
+               <div class="card container">
+                  <img class="card-img" src="/static/coverImage.jpg" alt="Card image">
+                  <div class="card-img-overlay">
+                      <h5 class="card-title centered"><a href="{{url_for('searchCategory', type='Musical')}}">MUSICAL</a></h5>
+                  </div>
+                </div>
+
+
+
+       </div>
+
+           <br>
+
+
+           <div class="card-deck">
+<div class="card container">
+  <img class="card-img" src="/static/coverImage.jpg" alt="Card image" >
+  <div class="card-img-overlay">
+      <h5 class="card-title centered"><a href="{{url_for('searchCategory', type='Mystery')}}" >MYSTERY</a></h5>
+  </div>
+</div>
+
+               <div class="card container">
+                  <img class="card-img" src="/static/coverImage.jpg" alt="Card image">
+                  <div class="card-img-overlay">
+                      <h5 class="card-title centered"><a href="{{url_for('searchCategory', type='Romance')}}">ROMANCE</a></h5>
+                  </div>
+                </div>
+
+               <div class="card container">
+                  <img class="card-img" src="/static/coverImage.jpg" alt="Card image">
+                  <div class="card-img-overlay">
+                      <h5 class="card-title centered"><a href="{{url_for('searchCategory', type='Sci-fi')}}">Sci-fi</a></h5>
+                  </div>
+                </div>
+
+
+
+       </div>
+
+           <br>
+
+
+           <div class="card-deck">
+<div class="card container">
+  <img class="card-img" src="/static/coverImage.jpg" alt="Card image" >
+  <div class="card-img-overlay">
+      <h5 class="card-title centered"><a href="{{url_for('searchCategory', type='Short')}}" >SHORT</a></h5>
+  </div>
+</div>
+
+               <div class="card container">
+                  <img class="card-img" src="/static/coverImage.jpg" alt="Card image">
+                  <div class="card-img-overlay">
+                      <h5 class="card-title centered"><a href="{{url_for('searchCategory', type='Sport')}}">SPORT</a></h5>
+                  </div>
+                </div>
+
+               <div class="card container">
+                  <img class="card-img" src="/static/coverImage.jpg" alt="Card image">
+                  <div class="card-img-overlay">
+                      <h5 class="card-title centered"><a href="{{url_for('searchCategory', type='Superhero')}}">SUPERHERO</a></h5>
+                  </div>
+                </div>
+
+
+
+       </div>
+
+           <br>
+
+
+           <div class="card-deck">
+<div class="card container">
+  <img class="card-img" src="/static/coverImage.jpg" alt="Card image" >
+  <div class="card-img-overlay">
+      <h5 class="card-title centered"><a href="{{url_for('searchCategory', type='Thriller')}}" >THRILLER</a></h5>
+  </div>
+</div>
+
+               <div class="card container">
+                  <img class="card-img" src="/static/coverImage.jpg" alt="Card image">
+                  <div class="card-img-overlay">
+                      <h5 class="card-title centered"><a href="{{url_for('searchCategory', type='War')}}">WAR</a></h5>
+                  </div>
+                </div>
+
+               <div class="card container">
+                  <img class="card-img" src="/static/coverImage.jpg" alt="Card image">
+                  <div class="card-img-overlay">
+                      <h5 class="card-title centered"><a href="{{url_for('searchCategory', type='Western')}}">WESTERN</a></h5>
+                  </div>
+                </div>
+
+
+
+       </div>
+
        </div>
  <div class="col-2"></div>
 

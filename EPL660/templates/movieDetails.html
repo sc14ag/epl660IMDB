@@ -77,38 +77,10 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
    <div class="row">
-     <div class="col-3">
-				<br>
-               <h2>Genres</h2>
-              <ul>
-			<li> <a href="{{url_for('searchCategory', type='Action')}}"> Action </a> </li>
+     <div class="col-2">
 
-			<li> <a href="{{url_for('searchCategory', type='Adventure')}}" > Adventure </a> </li>
-			<li><a href="{{url_for('searchCategory', type='Animation')}}"> Animation </a> </li>
-			<li> <a href="{{url_for('searchCategory', type='Biography')}}" > Biography </a> </li>
-			<li> <a href="{{url_for('searchCategory', type='Comedy')}}"> Comedy </a> </li>
-			<li> <a href="{{url_for('searchCategory', type='Crime')}}"> Crime </a> </li>
-			<li> <a href="{{url_for('searchCategory', type='Documentary')}}"> Documentary </a> </li>
-			<li> <a a href="{{url_for('searchCategory', type='Drama')}}">Drama </a> </li>
-			<li> <a href="{{url_for('searchCategory', type='Family')}}" > Family </a> </li>
-			<li> <a href="{{url_for('searchCategory', type='Fantasy')}}">Fantasy </a> </li>
-			<li> <a href="{{url_for('searchCategory', type='Film Noir')}}"> Film Noir </a> </li>
-			<li> <a href="{{url_for('searchCategory', type='History')}}"> History </a> </li>
-			 <li><a href="{{url_for('searchCategory', type='Horror')}}"> Horror </a> </li>
-			<li> <a href="{{url_for('searchCategory', type='Music')}}"> Music </a> </li>
-			<li> <a href="{{url_for('searchCategory', type='Musical')}}"> Musical </a> </li>
-			<li> <a href="{{url_for('searchCategory', type='Mystery')}}" > Mystery </a> </li>
-			<li> <a href="{{url_for('searchCategory', type='Romance')}}" > Romance </a> </li>
-			<li> <a href="{{url_for('searchCategory', type='Sci-fi')}}"> Sci-fi</a></li>
-			<li> <a href="{{url_for('searchCategory', type='Short')}}"> Short </a> </li>
-			<li> <a href="{{url_for('searchCategory', type='Sport')}}"> Sport </a> </li>
-			<li> <a href="{{url_for('searchCategory', type='Superhero')}}"> Superhero </a> </li>
-			<li> <a href="{{url_for('searchCategory', type='Thriller')}}"> Thriller </a> </li>
-			<li> <a href="{{url_for('searchCategory', type='War')}}"> War </a> </li>
-			<li> <a href="{{url_for('searchCategory', type='Western')}}"> Western </a> </li>
-		  </ul>
             </div>
-      <div class="col-6">
+      <div class="col-8">
           &nbsp&nbsp
 
          <div id="movies"></div>
@@ -124,22 +96,8 @@
          </div>
 
       </div>
-      <div class="col-3">
-		<br>
-         <h2>Top 3 Movies</h2>
-         <ol>
-            <li>Guardians of the Galaxy</li>
-            <li>Prometheus</li>
-            <li>Split</li>
-         </ol>
-         <br>
-         <br>
-         <h2>Recent Movies</h2>
-         <ol>
-            <li>Split</li>
-            <li>Sing</li>
-            <li>Suicide Squad</li>
-         </ol>
+      <div class="col-2">
+
       </div>
    </div>
 
@@ -188,12 +146,12 @@
    			var movie_actors = {{ movieAct|tojson }};
                var movie_text="";
 
-                       movie_text+="<h2 style='color:white'>"+movie_name+"</h2>";
-                       movie_text+="<span style='color:white'>"+movie_year+" | "+movie_duration+" minutes | "+movie_genre+" | Rating: "+movie_rating+"/10</span>";
+                       movie_text+="<h2 style='color:blue'>"+movie_name+"</h2>";
+                       movie_text+="<span style='color:blue'>"+movie_year+" | "+movie_duration+" minutes | "+movie_genre+" | Rating: "+movie_rating+"/10</span>";
                        movie_text+="<div><img src="+movie_image+"alt='No image found' width='100' height='100'id='responsive-image'></div>"
-                       movie_text+="<p style='color:white'>"+movie_plot+"</p>";
-                       <!--movie_text+="<p style='color:white'>Director:"+movie_dir+"</p>";-->
-                      <!--movie_text+="<p style='color:white'>Actors:"+movie_actors+"</p>";-->
+                       movie_text+="<p style='color:blue'>"+movie_plot+"</p>";
+                       <!--movie_text+="<p style='color:blue'>Director:"+movie_dir+"</p>";-->
+                      <!--movie_text+="<p style='color:blue'>Actors:"+movie_actors+"</p>";-->
 
 
                  document.getElementById("movies").innerHTML=movie_text;

@@ -25,10 +25,10 @@ class Index:
         lines = f.readlines()[1:]
         for line in lines:
             self.lineElements = line.split(',')
-            # self.clustTitles.append(self.lineElements[1].replace("\n","").replace("\n",""))
-            # self.clustSynopses.append(str(self.lineElements[3].replace("_",",").replace("\n","")))
-            # self.clustGenres.append(self.lineElements[2].replace("_",",").replace("\n",""))
-            # self.clustRanks.append(int(self.lineElements[0].replace("\n","")))
+            self.clustTitles.append(self.lineElements[1].replace("\n","").replace("\n",""))
+            self.clustSynopses.append(str(self.lineElements[3].replace("_",",").replace("\n","")))
+            self.clustGenres.append(self.lineElements[2].replace("_",",").replace("\n",""))
+            self.clustRanks.append(int(self.lineElements[0].replace("\n","")))
             json = {
 
                 "Rank": self.lineElements[0].replace("\n",""),
