@@ -41,7 +41,9 @@ def view():
     print('view Details')
 
     similarUrls = []
-    titleMovie =request.args.get('movie')
+    print(request.args)
+    titleMovie =request.args.get("movie").replace("+"," ")
+    print(titleMovie)
     similarMovies = clust.findSimilarMovies(titleMovie)
     print(similarMovies)
 
