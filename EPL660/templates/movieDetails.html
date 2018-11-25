@@ -2,10 +2,14 @@
 {% block body %}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+
 <style>
 
    * {box-sizing: border-box}
-   body {font-family: Verdana, sans-serif; margin:0}
+   body {font-family: Verdana, sans-serif; margin:0;color:blue;}
    /* Slideshow container */
    .slideshow-container {
    position: relative;
@@ -72,9 +76,53 @@
    /* Add an italic font style to all quotes */
    q {font-style: italic;}
    /* Add a blue color to the author */
+
+
+   /* carousel fullscreen */
+
+.carousel-fullscreen .carousel-inner .item {
+    height: 100vh;
+    min-height: 600px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* carousel fullscreen - vertically centered caption*/
+
+.carousel-fullscreen .carousel-caption {
+    top: 50%;
+    bottom: auto;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    margin: 10px;
+    text-indent: 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background-color: #0000ff;
+    box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);
+}
+.carousel-indicators .active {
+    width: 48px;
+    height: 48px;
+    margin: 10px;
+    background-color: #ffff99;
+}
+
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
 
    <div class="row">
      <div class="col-2">
@@ -85,50 +133,96 @@
 
          <div id="movies"></div>
 
+          <div class="container">
 
-         <h3 style="display: inline;color:white">More Like This&nbsp;</h3>
-         <div class="slideshow-container">
-            <div class="mySlides">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
 
-            </div>
-            <a class="prev" onclick="plusSlides(-1)">❮</a>
-            <a class="next" onclick="plusSlides(1)">❯</a>
-         </div>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <!--<div class="carousel-item active">-->
+                    <!--<img src="/static/toad.png" class="img-fluid" alt="">-->
+                    <!--<div class="carousel-caption">-->
+                        <!--<h1>Carousel in a container</h1>-->
+                        <!--<p>This is a demo for the Bootstrap Carousel Guide.</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="carousel-item">-->
+                    <!--<img src="/static/princess-peach.png" class="img-fluid" alt="">-->
+                <!--</div>-->
+                <!--<div class="carousel-item">-->
+                    <!--<img src="/static/Super-Mario.png" class="img-fluid" alt="">-->
+                <!--</div>-->
+            <!--</div>-->
 
-      </div>
-      <div class="col-2">
+            <!-- Controls -->
+            <a class="carousel-control-prev" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
 
-      </div>
-   </div>
+
+<<!--
+        <div class="container">
+          <div id="mycarousel" class="carousel slide" data-ride="carousel" data-interval="1000">
+              <ol class="carousel-indicators">
+                  <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#mycarousel" data-slide-to="1"></li>
+                  <li data-target="#mycarousel" data-slide-to="2"></li>
+              </ol>
+
+              <div class="carousel-inner">
+                  <div class="item active">
+                      <img src="/static/toad.png" width="150px" height="100px">
+                      <div class="carousel-caption">
+                          <h1>Theme 1</h1>
+                      </div>
+                  </div>
+                  <div class="item">
+                      <img src="/static/princess-=each.png" width="150px" height="100px">
+                      <div class="carousel-caption">
+                          <h1>Theme 1</h1>
+                      </div>
+                  </div>
+                  <div class="item">
+                      <img src="/static/Super-Mario.png" width="150px" height="100px">
+                      <div class="carousel-caption">
+                          <h1>Theme 1</h1>
+                      </div>
+                  </div>
+              </div>
+
+              <a class="left carousel-control" href="#mycarousel" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left"></span>
+              </a>
+
+              <a class="right carousel-control" href="#mycarousel" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+              </a>
+
+          </div>
+        </div>
+          -->
+
+         <h3 >More Like This&nbsp;</h3>
+
+
+
 
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script type="text/javascript">
-   var slideIndex = 1;
-   showSlides(slideIndex);
-
-   function plusSlides(n) {
-     showSlides(slideIndex += n);
-   }
-
-   function currentSlide(n) {
-     showSlides(slideIndex = n);
-   }
-
-   function showSlides(n) {
-     var i;
-     var slides = document.getElementsByClassName("mySlides");
-
-     if (n > slides.length) {slideIndex = 1}
-     if (n < 1) {slideIndex = slides.length}
-     for (i = 0; i < slides.length; i++) {
-         slides[i].style.display = "none";
-     }
-
-     slides[slideIndex-1].style.display = "block";
-
-   }
 
 
 
@@ -156,17 +250,21 @@
 
                  document.getElementById("movies").innerHTML=movie_text;
 
-
-
                  var similarMovies = {{ simMovies|tojson }};
-                       for (i = 0; i < similarMovies.length; i++) {
-                 	var finalMovieName=similarMovies[i];
-                 	var full_url_movie = "/view?movie="+finalMovieName;
+                 $(".carousel-inner").append("<div class='carousel-item active'><img src="+similarMovies[0]+"class='img-fluid' alt=''><div class='carousel-caption'></div></div>")
 
-                        $(".slideshow-container").append("<div class='mySlides'><img src="+similarMovies[i]+"alt='No image found' width='100' height='100'id='responsive-image'></img></div>")
-                       }
+                     for (i = 1; i < similarMovies.length; i++) {
+                $(".carousel-inner").append("<div class='carousel-item'><img src="+similarMovies[i]+"class='img-fluid' alt=''></div>")
+}
 
    			document.close();
 
 </script>
+
+
+       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
 {%  endblock %}
