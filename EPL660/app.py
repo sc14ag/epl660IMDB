@@ -26,7 +26,6 @@ def categories():
 
     imageAction= es.searchCategory("Action")[0]['ImageURL']
     imageAdventure = es.searchCategory("Adventure")[0]['ImageURL']
-    print(imageAdventure)
     imageAnimation = es.searchCategory("Animation")[0]['ImageURL']
     imageBiography = es.searchCategory("Biography")[0]['ImageURL']
     imageComedy = es.searchCategory("Comedy")[0]['ImageURL']
@@ -56,9 +55,7 @@ imgCrime=imageCrime, imgDrama=imageDrama, imgFamily=imageFamily, imgFantasy=imag
 def query():
     userquery = request.form['userQuery']
     results = es.searchByQuery(userquery)
-    # print(results[0][0])
     similarMovies = clust.findSimilarMovies(results[0][0])
-    print(similarMovies)
     return render_template('userInterface.html', queryResultsFlask=results[0],queryResultsPlot =results[1])
 
 
@@ -66,7 +63,7 @@ def query():
 def searchCategory():
     category = request.args.get('type')
     categoryResults = es.searchCategory(category)
-    return render_template('categorySearch.html',searchCategory=categoryResults,searchDes =categoryResults,searchImg = categoryResults )
+    return render_template('categorySearch.html',searchCategory=categoryResults,searchDes =categoryResults,searchImg = categoryResults,movieCategory=category)
 
 @app.route('/view/', methods=['GET'])
 def view():
