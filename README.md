@@ -25,4 +25,4 @@ https://www.python.org/downloads/release/python-360/
 
 8. Go to app.py and run it
 
-9. **Happy Coding**
+9. **Happy movie night**
